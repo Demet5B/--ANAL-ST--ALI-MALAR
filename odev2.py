@@ -42,15 +42,15 @@ def ebob(a, b):
 def ekok(a, b):
     return a * b // ebob(a, b)
 
-# Kullanıcıdan sayıları al
+
 sayi1 = int(input("Birinci sayıyı girin: "))
 sayi2 = int(input("İkinci sayıyı girin: "))
 
-# EBOB ve EKOK'u hesapla
+
 ebob_sonucu = ebob(sayi1, sayi2)
 ekok_sonucu = ekok(sayi1, sayi2)
 
-# Sonuçları ekrana yazdır
+
 print(f"{sayi1} ve {sayi2} sayılarının EBOB'u: {ebob_sonucu}")
 print(f"{sayi1} ve {sayi2} sayılarının EKOK'u: {ekok_sonucu}")
 
