@@ -61,3 +61,35 @@ print(f"{sayi1} ve {sayi2} sayılarının EKOK'u: {ekok_sonucu}")
 #EKOK ise 36'dır çünkü 12 ve 18'in ortak katlarının içinde en küçük olanıdır.
 
 
+#SORU4 Kullanıcıdan girilen sayının asal sayı olup olmadığını söyleyen bir program yazınız.
+#asal sayı : 1'e ve kendisine bölünebilen sayılara denir. (2,3,5,7...)
+
+sayi=int(input("Sayıyı Girin : "))
+if sayi > 1:
+
+   for i in range(2,sayi):
+       if (sayi % i) == 0:
+           print(sayi," Asal sayı değildir.")
+           break
+   else:
+       print(sayi," Asal sayıdır.")
+ 
+else:
+   print(sayi," Asal sayı değildir.") 
+
+#SORU 5 Kullanıcıdan girilen sayının asal çarpanlarını bulan bir program yazınız. 
+
+def asal_carpanlar(sayi):
+    carpanlar = []
+    carpan = 2
+
+    while sayi > 1:
+        while sayi % carpan == 0:
+            carpanlar.append(carpan)
+            sayi //= carpan
+        carpan += 1
+
+    return carpanlar
+sayi = int(input("Bir sayı girin: "))
+
+print(f"{sayi}'nin asal çarpanları: {asal_carpanlar(sayi)}")
